@@ -1,0 +1,9 @@
+<h1><%= @song.name %> </h1>
+
+<p> What would you like to do? </p>
+
+<%= link_to 'Edit Song', edit_artist_song_path(@artist, @song) %>
+<br/>
+<%= link_to 'Delete Song', artist_song_path(@artist, @song) %>
+<br/>
+<%= link_to 'Back to Artists', artist_index_path %>

@@ -1,0 +1,10 @@
+<h1> Billboard </h1>
+
+<%= link_to "Create a New Chart", new_billboard_path %>
+
+<%= @billboard.length === 0 ? "No Charts Added" : "" %>
+<ul>
+  <% @billboard.each do |billboard| %>
+    <li> <%= link_to billboard.name, billboard_path(billboard) %> </li>
+    <% end %>
+

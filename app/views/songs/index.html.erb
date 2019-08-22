@@ -1,0 +1,9 @@
+<h1> Songs </h1>
+
+<%= link_to 'Add a New Song', new_artist_song_path(@artist) %>
+
+<%= @songs.length === 0 ? "No Songs Added" : "" %>
+<ul>
+  <% @songs.each do |song| %>
+    <li> <%= link_to song.name, artist_songs_path(@artist) %> </li>
+  <% end %>
