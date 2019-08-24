@@ -1,7 +1,5 @@
-
 ActiveRecord::Schema.define(version: 2019_08_22_205741) do
 
-  # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "artists", force: :cascade do |t|
@@ -19,7 +17,7 @@ ActiveRecord::Schema.define(version: 2019_08_22_205741) do
   create_table "songs", force: :cascade do |t|
     t.string "name"
     t.bigint "artist_id", null: false
-    t.bigint "billboard_id", null: false
+    t.bigint "billboard_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["artist_id"], name: "index_songs_on_artist_id"
