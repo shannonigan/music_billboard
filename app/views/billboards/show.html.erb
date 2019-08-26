@@ -1,11 +1,24 @@
-<h1><%= @billboard.name %> 
-
-<p> What would you like to do? </p>
+<h1 class= "ui header"><%= @billboard.name %> </h1>
 
 
 
-<%= link_to 'View Songs', billboardsongs_path(@billboard) %>
+<body>
+
+  <ul>
+    <% @billboard.songs.each do |song| %>
+     <li><%= song.name %></li>
+    <% end %>
+  </ul>
+
+</body>
+
+
+<h4>
 <br />
 <%= link_to "Edit Chart", edit_billboard_path(@billboard) %>
 <br />
 <%= link_to "Delete Chart", billboard_path(@billboard), method: :delete%>
+<br />
+<%= link_to 'Back', billboards_path %>
+</h4>
+

@@ -1,6 +1,6 @@
 class SongsController < ApplicationController
-  before_action :set_artist
-  before_action :set_billboard
+  before_action :set_artist, except: [:show]
+  before_action :set_billboard, except: [:index]
   before_action :set_song, only: [:show, :edit, :update, :destroy]
 
   def index

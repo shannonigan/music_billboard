@@ -1,10 +1,26 @@
-<h1> Billboard </h1>
+<h1 class="ui header"> Billboard </h1>
 
-<%= link_to "Create a New Chart", new_billboard_path %>
+<body>
+ 
+  <div class="ui grid">
+   <div class= "sixteen wide mobile eight wide tablet four wide computer column">
+  
+  <ul>
+  <%= @billboard.length === 0 ? "No Charts Added" : "" %>
+    <% @billboard.each do |billboard| %>
+      <div class="content">
+      <li> <%= link_to billboard.name, billboard_path(billboard) %> </li>
+      <% end %>
+  </ul>
 
-<%= @billboard.length === 0 ? "No Charts Added" : "" %>
-<ul>
-  <% @billboard.each do |billboard| %>
-    <li> <%= link_to billboard.name, billboard_path(billboard) %> </li>
-    <% end %>
+
+
+    <button class="ui inverted secondary button"><%= link_to "Create a New Chart", new_billboard_path %></button>
+  
+  </div>
+
+  <h4> <%= link_to 'Back', root_path %></h4>
+</body>
+
+
 

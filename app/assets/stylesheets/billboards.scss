@@ -1,3 +1,18 @@
-// Place all the styles related to the billboards controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+header {
+  font-size: 80px;
+  text-align: center
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  
+}
+body {
+  margin-top: 50px;
+  font-family:"Arial Black", Gadget, sans-serif;
+  font-style: italic;
+  font-size:  40px;
+  color: red
+  
+}
