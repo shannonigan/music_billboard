@@ -8,3 +8,9 @@ end
       artist.songs.create(name: Faker::Music::UmphreysMcgee.song)
     
     end
+
+
+Billboard.destroy_all
+
+100.times do
+  
